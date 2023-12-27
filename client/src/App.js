@@ -6,7 +6,7 @@ import NAVBAR from './components/NAVBAR'
 import Home from './pages/Home'
 import SignupPage from './pages/signup';
 import LoginPage from './pages/login';
-// import AdminDashboard from './pages/AdminDashboard';
+import AdminDashboard from './pages/AdminDashboard';
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
           {/* <Route path='/admin/category' element={<AdminCategory/>}></Route> */}
           {/* <Route path='/admin/discount' element={<AdminDiscount/>}></Route> */}
           {/* <Route path='/admin/add-product' element={<AddProduct/>}></Route> */}
-          {/* <Route path='/admin' element={<AdminDashboard/>}></Route> */}
+          <Route path='/admin' element={<AdminDashboard/>}></Route>
           {/* <Route path='/category/:categoryName' element={<CategoryPage/>}></Route> */}
           {/* <Route path='/cart' element={<ShoppingCart/>}></Route> */}
           {/* <Route path='/admin/view-inventory' element={<AdminCategory/>}></Route> */}
