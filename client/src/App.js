@@ -7,6 +7,10 @@ import Home from './pages/Home'
 import SignupPage from './pages/signup';
 import LoginPage from './pages/login';
 import AdminDashboard from './pages/AdminDashboard';
+import AddProduct from './pages/AddNewProduct';
+import AdminDiscount from './pages/adminDiscount';
+import { AdminCoupons } from './pages/AdminCoupons';
+import AdminCategory from './pages/adminCategory';
 
 
 function App() {
@@ -14,7 +18,6 @@ function App() {
 
     <BrowserRouter>
       <div style={{ backgroundColor: '#F3FDE8' }}>
-      
         <NAVBAR />
         <div>
           <Routes>
@@ -25,14 +28,14 @@ function App() {
           {/* <Route path='/product' element={<Product/>}></Route> */}
           {/* <Route path='/admin/category' element={<AdminCategory/>}></Route> */}
           {/* <Route path='/admin/discount' element={<AdminDiscount/>}></Route> */}
-          {/* <Route path='/admin/add-product' element={<AddProduct/>}></Route> */}
-          <Route path='/admin' element={<AdminDashboard/>}></Route>
+          <Route path='/admin/add-product' element={<AddProduct/>}></Route>
+          <Route path='/admin' element={<AdminDashboard/ >}></Route>
           {/* <Route path='/category/:categoryName' element={<CategoryPage/>}></Route> */}
           {/* <Route path='/cart' element={<ShoppingCart/>}></Route> */}
-          {/* <Route path='/admin/view-inventory' element={<AdminCategory/>}></Route> */}
-          {/* <Route path='/admin/manage-discount' element={<AdminDiscount/>}></Route> */}
+          <Route path='/admin/view-inventory' element={<AdminCategory/>}></Route>
+          <Route path='/admin/manage-discount' element={<AdminDiscount/>}></Route>
           {/* <Route path='/adminShowProducts' element={<AdminCategoryProduct/>}></Route> */}
-          {/* <Route path='/AdminCoupons' element={<AdminCoupons/>}></Route> */}
+          <Route path='/AdminCoupons' element={<AdminCoupons/>}></Route>
           {/* <Route path='/viewOrderHistory' element={<ViewOrderHistory/>}></Route> */}
           {/* <Route path='/viewOrderDetails' element={<ViewOrderDetails/>}></Route> */}
           {/* <Route path='checkout' element={<Checkout/>}></Route> */}
