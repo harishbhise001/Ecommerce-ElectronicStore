@@ -14,6 +14,11 @@ import AdminCategory from './pages/adminCategory';
 import { AdminCategoryProduct } from './pages/AdminCategoryProduct';
 import ViewOrderHistory from './pages/viewOrderHistory';
 import ViewOrderDetails from './pages/viewOrderDetails';
+import Footer from './components/footer';
+import { ToastContainer, toast } from 'react-toastify';
+import Product from './pages/product';
+import Review from './pages/review';
+import CategoryPage from './pages/CategoryPage';  
 
 
 function App() {
@@ -27,13 +32,13 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/signin' element={<LoginPage/>}></Route>
           <Route path='/signup' element={<SignupPage/>}></Route>
-          {/* <Route path='/review' element={<Review/>}></Route> */}
-          {/* <Route path='/product' element={<Product/>}></Route> */}
-          {/* <Route path='/admin/category' element={<AdminCategory/>}></Route> */}
-          {/* <Route path='/admin/discount' element={<AdminDiscount/>}></Route> */}
+          <Route path='/review' element={<Review/>}></Route>
+          <Route path='/product' element={<Product/>}></Route>
+          <Route path='/admin/category' element={<AdminCategory/>}></Route>
+          <Route path='/admin/discount' element={<AdminDiscount/>}></Route>
           <Route path='/admin/add-product' element={<AddProduct/>}></Route>
           <Route path='/admin' element={<AdminDashboard/ >}></Route>
-          {/* <Route path='/category/:categoryName' element={<CategoryPage/>}></Route> */}
+          <Route path='/category/:categoryName' element={<CategoryPage/>}></Route>
           {/* <Route path='/cart' element={<ShoppingCart/>}></Route> */}
           <Route path='/admin/view-inventory' element={<AdminCategory/>}></Route>
           <Route path='/admin/manage-discount' element={<AdminDiscount/>}></Route>
@@ -45,8 +50,8 @@ function App() {
           {/* <Route path='addAddress' element={<AddNewAddresses/>}></Route> */}
           </Routes>
         </div>
-        {/* <ToastContainer/> */}
-        {/* <Footer/> */}
+        <ToastContainer/>
+        <Footer/>
       </div>
     </BrowserRouter>
   );

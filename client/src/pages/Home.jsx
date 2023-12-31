@@ -1,11 +1,12 @@
 import { Container,Row,Col } from "react-bootstrap";
 import HomeCarousel from "../components/homecarousel";
 import ProductCarousel from '../components/trendingproduct';
-// import Footer from "../componenets/footer";
+import Footer from "../components/footer";
 // import categoryService from "../services/categoryService";
 import { useEffect, useState } from "react";
 // import productServices from "../services/productServices";
-// import BasicCard from "../componenets/card";
+import BasicCard from "../components/card";
+import axios from 'axios';
 
 const Home=()=>{
 
@@ -14,7 +15,7 @@ const Home=()=>{
 
     useEffect(()=>{
         // getCategory();
-        // getProducts();
+        getProducts();
     },[])
 
     const getCategory= async ()=>{
@@ -23,6 +24,12 @@ const Home=()=>{
     }
 
     const getProducts=async()=>{
+
+        axios.get('https://dummyjson.com/products').then((response)=>{
+            // console.log(response.data.products);
+            setTopProducts(response.data.products);
+        })
+
         // const response=await productServices.showAllProducts();
         // setTopProducts(response.data.data);
         // console.log(response);

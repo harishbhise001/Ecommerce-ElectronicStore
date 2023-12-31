@@ -27,7 +27,7 @@ const NAVBAR = () => {
   const loadCategories = async () => {
 
     // hard coded
-    setCategories([{ name: "Laptop" }, { name: "Mobile" }, { name: "TV" }, { name: "Watch" }]);
+    setCategories([{ name: "smartphones" }, { name: "laptops" }, { name: "TV" }, { name: "Watch" }]);
   }
 
   const showCart = () => {
@@ -42,7 +42,7 @@ const NAVBAR = () => {
       <Container fluid>
 
         <Navbar.Brand as={Link} to={"/"}>
-          Navbar scroll
+          Shahapure Electronics
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
