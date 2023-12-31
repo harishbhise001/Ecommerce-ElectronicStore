@@ -7,13 +7,13 @@ const HomeCarousel=()=>{
     return(
       <Container style={{boxShadow:'0 4px 8px rgba(0, 0, 0, 0.5)'}} fluid>
         <Carousel>
-      <Carousel.Item interval={2000}>
+      <Carousel.Item interval={4000}>
         <Image style={Style} src="carouselimage1.jpg"/>
       </Carousel.Item>
-      <Carousel.Item interval={2000}>
+      <Carousel.Item interval={4000}>
         <Image style={Style}  src="carouselimage2.webp" />
       </Carousel.Item>
-      <Carousel.Item interval={2000}>
+      <Carousel.Item interval={4000}>
         <Image style={Style}  src="carouselimage3.avif" />
       </Carousel.Item>
     </Carousel>

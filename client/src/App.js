@@ -11,6 +11,7 @@ import AddProduct from './pages/AddNewProduct';
 import AdminDiscount from './pages/adminDiscount';
 import { AdminCoupons } from './pages/AdminCoupons';
 import AdminCategory from './pages/adminCategory';
+import { AdminCategoryProduct } from './pages/AdminCategoryProduct';
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
           {/* <Route path='/cart' element={<ShoppingCart/>}></Route> */}
           <Route path='/admin/view-inventory' element={<AdminCategory/>}></Route>
           <Route path='/admin/manage-discount' element={<AdminDiscount/>}></Route>
-          {/* <Route path='/adminShowProducts' element={<AdminCategoryProduct/>}></Route> */}
+          <Route path='/adminShowProducts' element={<AdminCategoryProduct/>}></Route>
           <Route path='/AdminCoupons' element={<AdminCoupons/>}></Route>
           {/* <Route path='/viewOrderHistory' element={<ViewOrderHistory/>}></Route> */}
           {/* <Route path='/viewOrderDetails' element={<ViewOrderDetails/>}></Route> */}

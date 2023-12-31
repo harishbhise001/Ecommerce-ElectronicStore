@@ -4,25 +4,30 @@ import validation from "../services/validation"
 import { Container, Table,Row,Col,Button } from "react-bootstrap";
 import log from "../services/logService";
 import { useNavigate } from "react-router-dom";
+
 const AdminCategory=()=>{
+
     const [categories,setCategories]=useState([]);
+
     const navigate=useNavigate();
     useEffect(()=>{
         getAllCategory();
     },[])
 
     const getAllCategory= async ()=>{
-        try{
-            const response= await categoryService.getCategories();
-            if(response.data.message==='success')
-            {
-                setCategories(response.data.data);
-                console.log(response.data.data)
-            }
-        }catch(ex)
-        {
-            validation.error("something went wrong");
-        }
+
+        setCategories([{ id: 1, name: "Laptop" }, { id: 2, name: "Mobile" }, { id: 3, name: "TV" }, { id: 4, name: "Watch" }]);
+        // try{
+        //     const response= await categoryService.getCategories();
+        //     if(response.data.message==='success')
+        //     {
+        //         setCategories(response.data.data);
+        //         console.log(response.data.data)
+        //     }
+        // }catch(ex)
+        // {
+        //     validation.error("something went wrong");
+        // }
         
     }
 
@@ -34,16 +39,16 @@ return(
     <div className='p-5'>  
   <Table striped bordered hover >  
   <thead>  
-    <tr>  
+    <tr >  
       <th>#</th>  
-      <th>First Name</th>  
-      <th>Last Name</th>   
+      <th>Name</th>  
+      <th>Action</th>   
     </tr>  
   </thead>  
   <tbody>  
     {categories.map((category)=>{
         return(
-         <tr>  
+         <tr key={category.id}>  
          <td>{category.id}</td>  
          <td>{category.name}</td>  
          <td>
