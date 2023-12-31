@@ -31,9 +31,12 @@ function AdminDashboard() {
                 </Link>
               </Col>
               <Col xs={12} md={6} lg={3} className="admin-option">
-                <Link to="/admin/view-transaction" className="admin-link">
+                <Link to="/viewOrderHistory" className="admin-link">
                   View Transactions
                 </Link>
+                {/* <Link to="/admin/view-transaction" className="admin-link">
+                  View Transactions
+                </Link> */}
               </Col>
             </Row>
           </div>

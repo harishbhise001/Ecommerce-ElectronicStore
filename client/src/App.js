@@ -12,6 +12,8 @@ import AdminDiscount from './pages/adminDiscount';
 import { AdminCoupons } from './pages/AdminCoupons';
 import AdminCategory from './pages/adminCategory';
 import { AdminCategoryProduct } from './pages/AdminCategoryProduct';
+import ViewOrderHistory from './pages/viewOrderHistory';
+import ViewOrderDetails from './pages/viewOrderDetails';
 
 
 function App() {
@@ -37,8 +39,8 @@ function App() {
           <Route path='/admin/manage-discount' element={<AdminDiscount/>}></Route>
           <Route path='/adminShowProducts' element={<AdminCategoryProduct/>}></Route>
           <Route path='/AdminCoupons' element={<AdminCoupons/>}></Route>
-          {/* <Route path='/viewOrderHistory' element={<ViewOrderHistory/>}></Route> */}
-          {/* <Route path='/viewOrderDetails' element={<ViewOrderDetails/>}></Route> */}
+          <Route path='/viewOrderHistory' element={<ViewOrderHistory/>}></Route>
+          <Route path='/viewOrderDetails' element={<ViewOrderDetails/>}></Route>
           {/* <Route path='checkout' element={<Checkout/>}></Route> */}
           {/* <Route path='addAddress' element={<AddNewAddresses/>}></Route> */}
           </Routes>

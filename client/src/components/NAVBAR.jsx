@@ -11,6 +11,7 @@ import {
   FormControl,
 } from "react-bootstrap";
 import { BsCart2 } from "react-icons/bs";
+import {toast , Toaster } from 'react-hot-toast';
 
 const NAVBAR = () => {
 
@@ -36,7 +37,7 @@ const NAVBAR = () => {
 
   return (
 
-
+    <><Toaster />
     <Navbar style={{ backgroundColor: '#C8E4B2' }} expand="lg">
       <Container fluid>
 
@@ -94,7 +95,7 @@ const NAVBAR = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
+    </>
   );
 }
 
